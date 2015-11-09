@@ -7,7 +7,7 @@ index
       if #i === 0
         span.cursor(
         class="{{if isTop}}top{{/}}{{if isLeft}} left{{/}}{{if isRight}} right{{/}}"
-        style="top:{{#position.top - scroll}}px; left:{{#position.left}}px; height:{{#position.height}}px;"
+        style="top:{{#position.top - scroll.y}}px; left:{{#position.left - scroll.x}}px; height:{{#position.height}}px;"
         )
           span.cursor-flag(as="$flag" style="background-color: {{#user.bgColor}};")
             span.cursor-name(style="color: {{#user.color}}") {{#user.label}}
@@ -15,6 +15,6 @@ index
       else
         span.cursor(
         class="{{if isTop}}top{{/}}{{if isLeft}} left{{/}}{{if isRight}} right{{/}}"
-        style="top:{{#position.top - scroll}}px; left:{{#position.left}}px; height:{{#position.height}}px;"
+        style="top:{{#position.top - scroll.y}}px; left:{{#position.left - scroll.x}}px; height:{{#position.height}}px;"
         )
           span.cursor-caret(style="background-color: {{#user.bgColor}}; width:{{#position.width}}px;") &#65279;

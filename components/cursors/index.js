@@ -24,6 +24,7 @@ DTextareaCursors.prototype.name = 'd-textarea-cursors';
 DTextareaCursors.prototype.init = function () {
 
   this.model.start('cursorsIds', 'data', function(items){
+    if (!items) return [];
     return Object.keys(items);
   });
 };
@@ -43,6 +44,8 @@ DTextareaCursors.prototype.create = function () {
  * @returns {{top: number, left: number, height: number, width: number}[]}
  */
 DTextareaCursors.prototype.getCursorPositions = function (wrapper, textarea, mirror, cursor) {
+
+  if (!mirror) return; // not load yet?
 
 // The properties that we copy into a mirrored div.
 // Note that some browsers, such as Firefox,

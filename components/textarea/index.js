@@ -13,11 +13,11 @@ function DTextarea() {
 }
 
 DTextarea.prototype.view = __dirname;
-DTextarea.prototype.name = 'd-textarea';
+DTextarea.prototype.name = 'd-textarea-mc';
 
 DTextarea.prototype.init = function () {
 
-  this.model.setNull('scroll', 0);
+  this.model.setNull('scroll', {y: 0, x: 0});
   this.inFocus(false);
 
   this.on('destroy', this.clearLocalCursor); // not works with close window
@@ -226,6 +226,6 @@ DTextarea.prototype.domEvents = {
 
   'scroll': function (event) {
 
-    this.setScroll(event.target.scrollTop);
+    this.setScroll({y: event.target.scrollTop, x: event.target.scrollLeft});
   }
 };

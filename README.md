@@ -24,7 +24,7 @@ app.proto.cursorPropertiesForUser = function (userId) {
          
     var label = 'intruder'; // :)
     var color = 'rgba(250, 250, 250, .9)';
-    var bgColor = 'rgba(200, 0, 0, .5)';
+    var bgColor = 'rgba(200, 0, 0, .9)';
     
     var channel = function (uid, index) {
     
@@ -38,7 +38,7 @@ app.proto.cursorPropertiesForUser = function (userId) {
         
         var uid = userId.substring(0, 3);
         
-        bgColor = 'rgba(' + channel(uid, 0) + ', ' + channel(uid, 1) + ', ' + channel(uid, 2) + ', .5)';
+        bgColor = 'rgba(' + channel(uid, 0) + ', ' + channel(uid, 1) + ', ' + channel(uid, 2) + ', .9)';
     }
     return {
         label: label,
@@ -69,7 +69,7 @@ Collection ``_page.textCursors`` must be unique for ``_page.text``.
 
 ## Demo
 
-[Demo](http://d-textarea-mc.heroku.com) coming soon
+[Demo](http://d-textarea-mc.herokuapp.com) coming soon
 
 ## Issues
 
