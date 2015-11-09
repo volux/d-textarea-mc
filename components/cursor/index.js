@@ -21,6 +21,10 @@ DTextareaCursor.prototype.init = function () {
   this.model.setNull('isLeft', true);
   this.model.setNull('isRight', false);
 
+};
+
+DTextareaCursor.prototype.create = function () {
+
   this.model.on('change', 'positions**', this.changeOrientation.bind(this));
   this.model.on('change', 'scroll', this.onScroll.bind(this));
 };
