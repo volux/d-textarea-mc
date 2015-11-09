@@ -1,0 +1,69 @@
+// for screed-textarea components
+
+@media screen
+
+  .d-textarea-mirror
+    position absolute
+    left 0
+    visibility hidden
+    white-space pre-wrap
+    word-wrap break-word
+    z-index -1
+
+  // Taken from QuillJS
+  .d-textarea-cursors
+    position absolute
+    left 0
+    top 0
+    z-index 1
+    .cursor
+      margin-left -1px
+      position absolute
+    .cursor-flag
+      bottom 100%
+      position absolute
+      white-space nowrap
+      font-family sans-serif
+      box-shadow 2px 2px 1px rgba(50, 50, 50, .2)
+      text-shadow 1px 1px 1px rgba(50, 50, 50, .2)
+    .cursor-name
+      display inline-block
+      color white
+      padding 2px 8px
+    .cursor-caret
+      height 100%
+      position absolute
+      min-width 2px
+      box-shadow 1px 1px 1px rgba(50, 50, 50, .2)
+    .cursor.hidden .cursor-flag
+      display none
+    .cursor.top .cursor-flag
+      bottom auto
+      top 100%
+    .cursor.right .cursor-flag
+      right -2px
+
+@media all
+
+  .d-textarea
+    position relative
+    with 100%
+    height 100%
+
+    textarea
+      display block
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+      border none // !important you can set border to .d-textarea
+      padding .5em // you can overwrite it
+      font-size 12pt  // you can overwrite it
+
+
+@media print
+
+  .d-textarea-mirror
+  .d-textarea-cursors
+    display none

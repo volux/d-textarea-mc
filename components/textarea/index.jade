@@ -1,0 +1,15 @@
+index(element="d-textarea")
+
+  .d-textarea(as="$wrapper" class="{{if focus}} d-textarea-focus{{/}}")
+
+    view(
+      is="d-textarea-cursors"
+      as="$cursors"
+      data="{{cursors}}"
+      userId="{{userId}}"
+      scroll="{{scroll}}"
+      )
+
+    textarea(as="$textarea") {{data}}
+
+    .d-textarea-mirror(as="$mirror") &#65279;

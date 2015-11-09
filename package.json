@@ -1,0 +1,29 @@
+{
+  "name": "d-textarea-mc",
+  "version": "0.1.0",
+  "description": "Textarea with multiple cursors. DerbyJS component.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volux/d-textarea-mc.git"
+  },
+  "keywords": [
+    "derby",
+    "derbyjs",
+    "textarea",
+    "component",
+    "multicursor"
+  ],
+  "author": "Andrey Skulov <andrey.skulov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/volux/d-textarea-mc/issues"
+  },
+  "homepage": "https://github.com/volux/d-textarea-mc#readme",
+  "dependencies": {
+    "dom-element-client-rectangles": "github:volux/dom-element-client-rectangles"
+  }
+}

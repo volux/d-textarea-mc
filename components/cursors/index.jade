@@ -1,0 +1,12 @@
+index
+  // QuillJS method
+  .d-textarea-cursors(as="$node")
+    each cursorsIds as #cursorId
+      if userId !== #cursorId
+        //put your custom code in app.proto.cursorPropertiesForUser
+        view(
+        is="d-textarea-cursor"
+        userProps="{{cursorPropertiesForUser(#cursorId)}}"
+        positions="{{positions[#cursorId]}}"
+        scroll="{{scroll}}"
+        )

@@ -1,0 +1,20 @@
+index
+  // Template idea taken from QuillJS multi cursor module
+  // https://github.com/quilljs/quill/blob/develop/src/modules/multi-cursor.js
+
+  with userProps as #user
+    each positions as #position, #i
+      if #i === 0
+        span.cursor(
+        class="{{if isTop}}top{{/}}{{if isLeft}} left{{/}}{{if isRight}} right{{/}}"
+        style="top:{{#position.top - scroll}}px; left:{{#position.left}}px; height:{{#position.height}}px;"
+        )
+          span.cursor-flag(as="$flag" style="background-color: {{#user.bgColor}};")
+            span.cursor-name(style="color: {{#user.color}}") {{#user.label}}
+          span.cursor-caret(style="background-color: {{#user.bgColor}}; width:{{#position.width}}px;") &#65279;
+      else
+        span.cursor(
+        class="{{if isTop}}top{{/}}{{if isLeft}} left{{/}}{{if isRight}} right{{/}}"
+        style="top:{{#position.top - scroll}}px; left:{{#position.left}}px; height:{{#position.height}}px;"
+        )
+          span.cursor-caret(style="background-color: {{#user.bgColor}}; width:{{#position.width}}px;") &#65279;
