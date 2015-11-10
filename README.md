@@ -69,7 +69,7 @@ Collection ``_page.textCursors`` must be unique for ``_page.text``.
 
 ## Demo
 
-[Demo](http://d-textarea-mc.herokuapp.com) coming soon
+[Live demo](https://d-textarea-mc.sockeye.cc/). [Demo repo](https://github.com/volux/d-textarea-mc-demo)
 
 ## Issues
 
